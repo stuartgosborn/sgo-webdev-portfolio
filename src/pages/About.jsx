@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section className="container">
       <h1>About Me</h1>
-      <img src={photo} alt="A picture of Stuart" />
+      <img className='profilePhoto' src={photo} alt="A picture of Stuart" />
       <p>
         I am a full-stack web developer with a background in commercial banking.
         I am passionate about creating and maintaining websites and applications
@@ -24,7 +24,7 @@ export default function About() {
         Bank, among others, showcases my ability to navigate and contribute
         significantly to the dynamic banking industry. Stuart&apos;s commitment to
         excellence, coupled with my adeptness in coaching and volunteer work,
-        positions him as a catalyst for collaborative innovation and growth in
+        positions me as a catalyst for collaborative innovation and growth in
         any organization.
       </p>
     </section>
