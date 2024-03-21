@@ -2,14 +2,14 @@ import { Link, useLocation } from "react-router-dom";
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
-function NavTabs({ photo }) {
+function NavTabs() {
   const currentPage = useLocation().pathname;
 
   return (
     <>
       <ul className="nav nav-tabs">
       <span id='thumbNailContainer'>
-        <img id="thumbNail" src={photo} alt="Stuart Osborn" />
+        <img id="thumbNail" src='/igThumbnail.jpeg' alt="Stuart Osborn" />
         <span>STUART GARLAND OSBORN</span>
       </span>
       

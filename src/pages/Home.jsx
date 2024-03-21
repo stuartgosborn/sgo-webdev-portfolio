@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+
 import { Link } from "react-router-dom";
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       </p>
       <p>
         <Link to='/portfolio' >
-        <img className="logo" src={logo} alt="" />
+        <img className="logo" src='/logo.png' alt="" />
         </Link>
       </p>
     </section>

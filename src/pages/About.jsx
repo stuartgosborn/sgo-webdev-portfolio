@@ -1,10 +1,9 @@
-import photo from "../assets/sgosbornphoto.jpeg";
 
 export default function About() {
   return (
     <section className="container">
       <h1>About Me</h1>
-      <img className='profilePhoto' src={photo} alt="A picture of Stuart" />
+      <img className='profilePhoto' src='/sgosbornphoto.jpeg' alt="A picture of Stuart" />
       <p>
         I am a full-stack web developer with a background in commercial banking.
         I am passionate about creating and maintaining websites and applications
