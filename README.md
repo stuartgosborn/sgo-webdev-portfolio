@@ -20,7 +20,7 @@
   Deployed Link
   - https://chimerical-sprite-ccd622.netlify.app
 
-  Live Site:
+  Repository:
   - https://github.com/stuartgosborn/sgo-webdev-portfolio
 
 
