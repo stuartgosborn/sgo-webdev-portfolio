@@ -17,6 +17,13 @@
   <a name='description'></a> 
   A portfolio of featured web development projects by Stuart Osborn.  
 
+  Deployed Link
+  - https://chimerical-sprite-ccd622.netlify.app
+
+  Live Site:
+  - https://github.com/stuartgosborn/sgo-webdev-portfolio
+
+
 ![alt text](image.png)  
 
 ![alt text](image-1.png)  
