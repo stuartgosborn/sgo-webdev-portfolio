@@ -10,7 +10,7 @@ function NavTabs() {
       <ul className="nav nav-tabs">
       <span id='thumbNailContainer'>
         <img id="thumbNail" src='/igThumbnail.jpeg' alt="Stuart Osborn" />
-        <span>STUART GARLAND OSBORN</span>
+        <span>Stuart Garland Osborn</span>
       </span>
       
         <li className="nav-item">
