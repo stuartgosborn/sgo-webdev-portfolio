@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const ContactForm = () => {
   const [formFields, setFormFields] = useState({
@@ -7,6 +7,7 @@ const ContactForm = () => {
     message: ''
   });
   const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false); // Track form submission status
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -39,55 +40,76 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here, you can integrate the form submission logic, like sending the data to an API.
+    // Here you can integrate the logic to send the data to an API or handle it as required
     console.log('Form submitted:', formFields);
+    
+    // Clear the input fields after submission
+    setFormFields({
+      name: '',
+      email: '',
+      message: ''
+    });
+
+    // Set submitted state to true
+    setSubmitted(true);
   };
 
   return (
-    <form className='contact' onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name"></label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formFields.name}
-          onChange={handleInputChange}
-          onBlur={handleBlur}
-          placeholder='Name here...'
-        />
-        {errors.name && <p>{errors.name}</p>}
-      </div>
+    <div>
+      {submitted ? (
+        <div>
+          <p><strong>Thank you for your inquiry!</strong></p>
+          <p><strong>You message has been submitted. Once received, I will respond as soon as possible.</strong></p>
+          <p><strong><em>Have a great day!</em></strong></p>
+        </div>
+      ) : (
+        <form className='contact' name="contact" method="POST" data-netlify="true" onSubmit={handleSubmita}>
+          <input type="hidden" name="form-name" value="contact" />
+          <div>
+            <label htmlFor="name"></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formFields.name}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+              placeholder='Name here...'
+            />
+            {errors.name && <p>{errors.name}</p>}
+          </div>
 
-      <div>
-        <label htmlFor="email"></label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formFields.email}
-          onChange={handleInputChange}
-          onBlur={handleBlur}
-            placeholder='Email here...'
-        />
-        {errors.email && <p>{errors.email}</p>}
-      </div>
+          <div>
+            <label htmlFor="email"></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formFields.email}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+              placeholder='Email here...'
+            />
+            {errors.email && <p>{errors.email}</p>}
+          </div>
 
-      <div>
-        <label htmlFor="message"></label>
-        <textarea
-          id="message"
-          name="message"
-          value={formFields.message}
-          onChange={handleInputChange}
-          onBlur={handleBlur}
-            placeholder='Message here...'
-        />
-        {errors.message && <p>{errors.message}</p>}
-      </div>
+          <div>
+            <label htmlFor="message"></label>
+            <textarea
+              id="message"
+              name="message"
+              value={formFields.message}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+              placeholder='Message here...'
+            />
+            {errors.message && <p>{errors.message}</p>}
+          </div>
 
-      <button id = 'submit' type="submit">Submit</button>
-    </form>
+          <button id='submit' type="submit">Submit</button>
+        </form>
+      )}
+    </div>
   );
 };
 
