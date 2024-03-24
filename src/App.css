@@ -120,7 +120,7 @@ h1{
   margin: 20px;
 }
 
-#name, #email, #message, #submit {
+#name, #email, #message, #submit, #resubmitBtn {
   margin: 30px;
   padding: 10px;
   width: 300px;

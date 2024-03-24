@@ -70,7 +70,7 @@ const ContactForm = () => {
           <p><strong>Thank you for your inquiry!</strong></p>
           <p><strong>You message has been submitted. Once received, I will respond as soon as possible.</strong></p>
           <p><strong><em>Have a great day!</em></strong></p>
-          <button onClick={handleFormReset}>Submit Another Message</button>
+          <button id='resubmitBtn' onClick={handleFormReset}>Submit Another Message</button>
         </div>
       ) : (
         <> 
