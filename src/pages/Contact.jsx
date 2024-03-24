@@ -38,17 +38,10 @@ const ContactForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Here you can integrate the logic to send the data to an API or handle it as required
-    console.log('Form submitted:', formFields);
-    
-    // Clear the input fields after submission
-    setFormFields({
-      name: '',
-      email: '',
-      message: ''
-    });
+    await console.log('Form submitted:', formFields);
 
     // Set submitted state to true
     setSubmitted(true);
