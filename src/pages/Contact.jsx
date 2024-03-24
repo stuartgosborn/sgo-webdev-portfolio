@@ -73,6 +73,8 @@ const ContactForm = () => {
           <button onClick={handleFormReset}>Submit Another Message</button>
         </div>
       ) : (
+        <> 
+        <h2>Contact</h2>
         <form className='contact' name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
           <div>
@@ -85,7 +87,7 @@ const ContactForm = () => {
               onChange={handleInputChange}
               onBlur={handleBlur}
               placeholder='Name here...'
-            />
+              />
             {errors.name && <p>{errors.name}</p>}
           </div>
 
@@ -99,7 +101,7 @@ const ContactForm = () => {
               onChange={handleInputChange}
               onBlur={handleBlur}
               placeholder='Email here...'
-            />
+              />
             {errors.email && <p>{errors.email}</p>}
           </div>
 
@@ -112,12 +114,13 @@ const ContactForm = () => {
               onChange={handleInputChange}
               onBlur={handleBlur}
               placeholder='Message here...'
-            />
+              />
             {errors.message && <p>{errors.message}</p>}
           </div>
 
           <button id='submit' type="submit">Submit</button>
         </form>
+      </>
       )}
     </div>
   );
