@@ -13,15 +13,15 @@ export default function About() {
         team environment.
       </p>
       <p>
-        Coming form commercial banking, I have a strong foundation in accounting and a master&apos;s degree complimented by
+        Coming from commercial banking, I have a strong foundation in accounting with a master&apos;s degree complimented by
         MBA-equivalent electives. My career experience spans across commercial
         banking, where I excelled in structuring, underwriting, and
         managing financial exposures, demonstrating leadership and
         project management skills. My expertise is further evidenced by
-        my proficiency in financial analysis, risk underwriting, and portfolio
+        my proficiency in industry research, financial analysis, and over all portfolio
         management. My tenure at institutions like Crowe LLP and First Midwest
         Bank, among others, showcases my ability to navigate and contribute
-        significantly to the dynamic banking industry. Stuart&apos;s commitment to
+        to the dynamic banking industry. My commitment to
         excellence, coupled with my adeptness in coaching and volunteer work,
         positions me as a catalyst for collaborative innovation and growth in
         any organization.

@@ -20,7 +20,7 @@ h1{
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
-  top: 200px;
+  top: 150px;
   left: 0;
   right: 0;
   z-index: 100;
@@ -50,7 +50,7 @@ h1{
 .main {
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: 350px;
+  margin-top: 300px;
 }
 
 .logo {

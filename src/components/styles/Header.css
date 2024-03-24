@@ -2,7 +2,7 @@
     background-image: url('/webdev-port-image.jpeg'); /* Local file path or URL */
     background-size: cover; /* Cover the entire header area */
     background-position: center; /* Center the background image */
-    height: 200px; /* Set the height of your header */
+    height: 150px; /* Set the height of your header */
     color: white; /* Example text color for contrast */
     width: 100vw;
     position: fixed;
