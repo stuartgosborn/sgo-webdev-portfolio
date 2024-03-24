@@ -69,7 +69,7 @@ const ContactForm = () => {
         <> 
         <h1>Contact</h1>
         <form className='contact' name="contact" method="POST" onSubmit={handleSubmit}>
-          <input type="hidden" name="form-name" value="portfolioContactFrom" />
+          <input type="hidden" name="form-name" value="portfolioContactForm" />
           <div>
             <label htmlFor="name"></label>
             <input
