@@ -41,8 +41,16 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can integrate the logic to send the data to an API or handle it as required
-    await console.log('Form submitted:', formFields);
+    const myForm = e.target;
+    const formData = new FormData(myForm);
+
+    // Here you can integrate the logic to send the data to an API or handle it as required 
+    await  fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+        .then(console.log('Form submitted:', formFields, formData)).catch((error) => {console.log('Error:', error)});
 
     // Set submitted state to true
     setSubmitted(true);
