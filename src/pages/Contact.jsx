@@ -74,7 +74,7 @@ const ContactForm = () => {
         </div>
       ) : (
         <> 
-        <h2>Contact</h2>
+        <h1>Contact</h1>
         <form className='contact' name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
           <div>

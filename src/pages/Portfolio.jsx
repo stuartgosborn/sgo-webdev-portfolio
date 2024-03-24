@@ -54,7 +54,7 @@ export default function Portfolio() {
 
   return (
     <section>
-      <h2>Portfolio</h2>
+      <h1>Portfolio</h1>
       <Grid container spacing={3}>
         {portfolio.map((portfolio) => (
           <Grid item xs={12} sm={6} md={4} key={portfolio.id}

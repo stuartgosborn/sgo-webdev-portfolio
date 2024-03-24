@@ -10,8 +10,8 @@ export default function Project({ name, github, live, img, isHovered }) {
 
   return (
     <div className="project">
-        <h4>{name}</h4>
         
+        <h4>{name}</h4>
       <div className="portImg" style={gridImg}>
         <Link
             to={github}
