@@ -53,6 +53,15 @@ const ContactForm = () => {
     // Set submitted state to true
     setSubmitted(true);
   };
+  const handleFormReset = () => {
+    // Reset the form fields and set submitted state to false
+    setFormFields({
+      name: '',
+      email: '',
+      message: ''
+    });
+    setSubmitted(false);
+  };
 
   return (
     <div>
@@ -61,9 +70,10 @@ const ContactForm = () => {
           <p><strong>Thank you for your inquiry!</strong></p>
           <p><strong>You message has been submitted. Once received, I will respond as soon as possible.</strong></p>
           <p><strong><em>Have a great day!</em></strong></p>
+          <button onClick={handleFormReset}>Submit Another Message</button>
         </div>
       ) : (
-        <form className='contact' name="contact" method="POST" data-netlify="true" onSubmit={handleSubmita}>
+        <form className='contact' name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
           <div>
             <label htmlFor="name"></label>
