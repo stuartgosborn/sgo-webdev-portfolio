@@ -66,6 +66,7 @@ function NavTabs() {
             <Link to="/About" className="dropdown-item">About</Link>
             <Link to="/Portfolio" className="dropdown-item">Portfolio</Link>
             <Link to="/Contact" className="dropdown-item">Contact</Link>
+            <Link to="/Resume" className="dropdown-item">Resume</Link>
           </div>
         </li>
       </ul>
