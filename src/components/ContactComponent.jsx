@@ -16,7 +16,7 @@ export default function ContactCompoent({
           </p>
           <p>
             <strong>
-              You message has been submitted. Once received, I will respond as
+              Your message has been submitted. Once received, I will respond as
               soon as possible.
             </strong>
           </p>
