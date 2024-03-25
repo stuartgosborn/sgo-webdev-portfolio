@@ -32,9 +32,10 @@ h1{
   height: 60px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 0px;
+  padding: 0;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -50,8 +51,7 @@ h1{
 }
 
 #thumbNail{
-  height: 2em;
-  
+  height: 3em;
   border-radius: 50%;
   object-fit: cover;
   margin: 20px;
@@ -219,12 +219,12 @@ button:focus-visible {
   }
 
   .menu {
-    height: 60px;
+    height: 100px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
-    align-items: center;
+    align-content: flex-end;
     padding: 0 0px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
