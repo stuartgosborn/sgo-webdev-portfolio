@@ -5,6 +5,7 @@
   width: 100%;
   text-align: center;
   justify-content: center;
+  
 }
 
 .headerBackground {
@@ -23,13 +24,15 @@
 
 h1{
   margin: 20px;
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-.nav{
-  height: 4em;
+.menu {
+  height: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 0px;
   background-color: #fff;
@@ -128,12 +131,39 @@ h1{
   
 }
 
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
 .contact{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 #name, #email, #message, #submit, #resubmitBtn {
@@ -149,7 +179,7 @@ h1{
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 60px;
+  height: 4em;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -172,7 +202,7 @@ h1{
   text-transform: uppercase;
 }
 /* Media query for mobile devices (up to 767px) */
-@media screen and (max-width: 863px) {
+@media screen and (max-width: 767px) {
   /* Mobile styles go here */
   .headerBackground {
     background-image: url('/webdev-port-image.jpeg'); /* Local file path or URL */
@@ -181,48 +211,40 @@ h1{
     height: 150px; /* Set the height of your header */
     color: white; /* Example text color for contrast */
     width: 100vw;
-    position: relative;
-    top: -30px;
+    position: fixed;
+    top: 0px;
     left: 0;
     right: 0;
     z-index: 100;
   }
 
-  .nav{
-    height: 4em;
+  .menu {
+    height: 60px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly ;
+    justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 0px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: -30px;
+    position: fixed;
+    top: 150px;
     z-index: 100;
     text-transform: uppercase;
-  }
-
-  #thumbNailContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
-    font-weight: bolder;
-    
   }
 
   .main {
     margin-left: 0;
     margin-right:0;
-    margin-top: 0;
+    margin-top: 250px;
   }
 
   .footer{
     padding-top: 20px;
     margin: 0;
     width: 100vw;
-    height: 60px;
+    height: 4em;
     text-align: center;
     display: flex;
     flex-direction: column-reverse;
@@ -231,7 +253,7 @@ h1{
     padding: 0 20px;
     background-color: #fff;
     box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.1);
-    line: height 35px;
+    line-height: 35px;
     color: #6c757d;
     font-size: 14px;
     font-weight: 400;
@@ -239,6 +261,10 @@ h1{
     border-top: 1px solid #e9ecef;
     z-index: 100;
     text-transform: uppercase;
+  }
+  
+  .home, .about, .portfolio, .contactli, .resume{
+    display: none;
   }
 
 }

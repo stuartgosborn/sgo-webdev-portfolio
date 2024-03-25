@@ -1,72 +1,72 @@
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
 function NavTabs() {
+  const [showDropdown, setShowDropdown] = useState(false);
   const currentPage = useLocation().pathname;
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   return (
     <>
-      <ul className="nav nav-tabs">
-      <span id='thumbNailContainer'>
-        <img id="thumbNail" src='/igThumbnail.jpeg' alt="Stuart Osborn" />
-        <span>Stuart Garland Osborn</span>
-      </span>
-      
-        <li className="nav-item">
+      <ul className={`nav nav-pills flex-sm-column menu${showDropdown ? ' show-dropdown' : ''}`}>
+        <li id='thumbNailContainer'>
+          <img id="thumbNail" src='/igThumbnail.jpeg' alt="Stuart Osborn" />
+          <span>Stuart Garland Osborn</span>
+        </li>
+        <li className="nav-item home">
           <Link
             to="/"
-            // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-            // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
             className={currentPage === "/" ? "nav-link active" : "nav-link"}
           >
             Home
           </Link>
         </li>
-        <li className="nav-item">
+        <li className="nav-item about">
           <Link
             to="/About"
-            // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-            // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-            className={
-              currentPage === "/About" ? "nav-link active" : "nav-link"
-            }
+            className={currentPage === "/About" ? "nav-link active" : "nav-link"}
           >
             About
           </Link>
         </li>
-        <li className="nav-item">
+        <li className="nav-item portfolio">
           <Link
             to="/Portfolio"
-            // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={
-              currentPage === "/Portfolio" ? "nav-link active" : "nav-link"
-            }
+            className={currentPage === "/Portfolio" ? "nav-link active" : "nav-link"}
           >
             Portfolio
           </Link>
         </li>
-        <li className="nav-item">
+        <li className="nav-item contactli">
           <Link
             to="/Contact"
-            // Check to see if the currentPage is `Portfolio`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={
-              currentPage === "/Contact" ? "nav-link active" : "nav-link"
-            }
+            className={currentPage === "/Contact" ? "nav-link active" : "nav-link"}
           >
             Contact
           </Link>
         </li>
-        <li className="nav-item">
+        <li className="nav-item resume">
           <Link
             to="./Resume"
-            // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={
-              currentPage === "/Resume" ? "nav-link active" : "nav-link"
-            }
+            className={currentPage === "/Resume" ? "nav-link active" : "nav-link"}
           >
             Resume
           </Link>
+        </li>
+        {/* Dropdown menu for small screens */}
+        <li className="nav-item dropdown d-sm-none">
+          <button className="nav-link dropdown-toggle" onClick={toggleDropdown}>
+            Menu
+          </button>
+          <div className={`dropdown-menu${showDropdown ? ' show' : ''} dropdown`}>
+            <Link to="/" className="dropdown-item">Home</Link>
+            <Link to="/About" className="dropdown-item">About</Link>
+            <Link to="/Portfolio" className="dropdown-item">Portfolio</Link>
+            <Link to="/Contact" className="dropdown-item">Contact</Link>
+          </div>
         </li>
       </ul>
     </>

@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import NavTabs from "./components/NavTabs";
 import Footer from "./components/Footer";
 import "./App.css";
-
 function App() {
 
 
@@ -12,7 +11,7 @@ function App() {
       <div >
 
       <Header className="headerBackground"/>
-      <NavTabs/>
+      <NavTabs/>      
       <main className="mx-3 main">
         <Outlet />
       </main>

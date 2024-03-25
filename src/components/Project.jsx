@@ -22,8 +22,8 @@ export default function Project({ name, github, live, img, isHovered }) {
             style = {{display: isHovered ? "block" : "none"}}
 
             >
-                Repository
             <FontAwesomeIcon icon={faGithub} size="2x" />
+                Repository
         </Link>
         <Link
             to={live}
