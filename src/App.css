@@ -72,6 +72,10 @@ h1{
   margin-top: 300px;
 }
 
+#welcome{
+ padding-top: 100px;
+}
+
 .logo {
   height: 10em;
   padding: 1.5em;
@@ -188,8 +192,8 @@ button:focus-visible {
   padding: 0 20px;
   background-color: #fff;
   box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.1);
-  position: relative;
-  bottom: -125px;
+  position: fixed;
+  bottom: 0px;
   left: 0;
   right: 0;
   line-height: 60px;
