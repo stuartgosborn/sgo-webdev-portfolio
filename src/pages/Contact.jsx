@@ -44,6 +44,16 @@ const ContactForm = () => {
     const myForm = e.target;
     const formData = new FormData(myForm);
 
+    if(!formFields.name || !formFields.email || !formFields.message) {
+      // Set errors for empty fields
+      setErrors({
+        name: !formFields.name ? 'Name is required' : '',
+        email: !formFields.email ? 'Email is required' : '',
+        message: !formFields.message ? 'Message is required' : ''
+      });
+      return;
+    }
+
     // Here you can integrate the logic to send the data to an API or handle it as required 
     await  fetch("/", {
       method: "POST",
@@ -62,6 +72,7 @@ const ContactForm = () => {
       email: '',
       message: ''
     });
+    console.log('Form reset:');
     setSubmitted(false);
   };
 
