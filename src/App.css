@@ -222,9 +222,9 @@ button:focus-visible {
     height: 100px;
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
-    align-content: flex-end;
+    align-content: center;
     padding: 0 0px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -232,6 +232,15 @@ button:focus-visible {
     top: 150px;
     z-index: 100;
     text-transform: uppercase;
+    padding: 25px;
+    
+  }
+
+  #thumbNail{
+    height: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+  
   }
 
   .main {

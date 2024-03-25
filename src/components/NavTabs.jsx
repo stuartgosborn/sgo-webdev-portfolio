@@ -14,7 +14,7 @@ function NavTabs() {
       <ul className={`nav nav-pills flex-sm-column menu${showDropdown ? ' show-dropdown' : ''}`}>
         <li id='thumbNailContainer'>
           <img id="thumbNail" src='/igThumbnail.jpeg' alt="Stuart Osborn" />
-          <span>Stuart Garland Osborn</span>
+          <span>Stuart G. Osborn</span>
         </li>
         <li className="nav-item home">
           <Link
