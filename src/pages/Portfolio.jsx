@@ -7,6 +7,14 @@ export default function Portfolio() {
 
   const portfolio = [
     {
+      id: 0,
+      name: "Debate Cloud",
+      github: 'https://github.com/FinalProject-React-Team2/P3T2',
+      live: 'https://p3t2.onrender.com/',
+      img: "/debatecloud.jpeg",
+
+    },
+    {
       id: 1,
       name: "Book Review",
       github: "https://github.com/Project2NU/bestrepo",
