@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ContactCompoent from '../components/ContactComponent'; 
+import ContactComponent from '../components/ContactComponent'; 
 
 const ContactForm = () => {
   const [formFields, setFormFields] = useState({
@@ -77,7 +77,7 @@ const ContactForm = () => {
   };
 
   return (
-    <ContactCompoent
+    <ContactComponent
       formFields={formFields}
       errors={errors}
       submitted={submitted}
