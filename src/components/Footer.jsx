@@ -9,6 +9,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <p>© 2024 by Stuart G. Osborn</p>
+      
       <Link
         to={github}
         target="_blank"
@@ -27,6 +28,7 @@ export default function Footer() {
         
         <FontAwesomeIcon icon={faLinkedin} size="2x" />
       </Link>
+
     </footer>
   );
 }

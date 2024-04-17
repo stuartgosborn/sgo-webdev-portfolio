@@ -11,10 +11,24 @@ function NavTabs() {
 
   return (
     <>
-      <ul className={`nav nav-pills flex-sm-column menu${showDropdown ? ' show-dropdown' : ''}`}>
-        <li id='thumbNailContainer'>
-          <img id="thumbNail" src='/igThumbnail.jpeg' alt="Stuart Osborn" />
-          <span>Stuart G. Osborn</span>
+      <ul
+        className={`nav nav-pills flex-sm-column menu${
+          showDropdown ? " show-dropdown" : ""
+        }`}
+      >
+        <li id="thumbNailContainer">
+          <Link to= 'https://www.instagram.com/itsstueybaby/'>
+          <img id="thumbNail" src="/igThumbnail.jpeg" alt="Stuart Osborn" />
+          </Link>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <span>Stuart G. Osborn</span>
+            <Link to='https://www.codewars.com/users/rauttornboss'>
+            <img
+              src="https://www.codewars.com/users/rauttornboss/badges/micro?theme=light
+              "
+              />
+              </Link>
+          </div>
         </li>
         <li className="nav-item home">
           <Link
@@ -27,7 +41,9 @@ function NavTabs() {
         <li className="nav-item about">
           <Link
             to="/About"
-            className={currentPage === "/About" ? "nav-link active" : "nav-link"}
+            className={
+              currentPage === "/About" ? "nav-link active" : "nav-link"
+            }
           >
             About
           </Link>
@@ -35,7 +51,9 @@ function NavTabs() {
         <li className="nav-item portfolio">
           <Link
             to="/Portfolio"
-            className={currentPage === "/Portfolio" ? "nav-link active" : "nav-link"}
+            className={
+              currentPage === "/Portfolio" ? "nav-link active" : "nav-link"
+            }
           >
             Portfolio
           </Link>
@@ -43,7 +61,9 @@ function NavTabs() {
         <li className="nav-item contactli">
           <Link
             to="/Contact"
-            className={currentPage === "/Contact" ? "nav-link active" : "nav-link"}
+            className={
+              currentPage === "/Contact" ? "nav-link active" : "nav-link"
+            }
           >
             Contact
           </Link>
@@ -51,7 +71,9 @@ function NavTabs() {
         <li className="nav-item resume">
           <Link
             to="./Resume"
-            className={currentPage === "/Resume" ? "nav-link active" : "nav-link"}
+            className={
+              currentPage === "/Resume" ? "nav-link active" : "nav-link"
+            }
           >
             Resume
           </Link>
@@ -61,12 +83,24 @@ function NavTabs() {
           <button className="nav-link dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
-          <div className={`dropdown-menu${showDropdown ? ' show' : ''} dropdown`}>
-            <Link to="/" className="dropdown-item">Home</Link>
-            <Link to="/About" className="dropdown-item">About</Link>
-            <Link to="/Portfolio" className="dropdown-item">Portfolio</Link>
-            <Link to="/Contact" className="dropdown-item">Contact</Link>
-            <Link to="/Resume" className="dropdown-item">Resume</Link>
+          <div
+            className={`dropdown-menu${showDropdown ? " show" : ""} dropdown`}
+          >
+            <Link to="/" className="dropdown-item">
+              Home
+            </Link>
+            <Link to="/About" className="dropdown-item">
+              About
+            </Link>
+            <Link to="/Portfolio" className="dropdown-item">
+              Portfolio
+            </Link>
+            <Link to="/Contact" className="dropdown-item">
+              Contact
+            </Link>
+            <Link to="/Resume" className="dropdown-item">
+              Resume
+            </Link>
           </div>
         </li>
       </ul>
