@@ -17,7 +17,7 @@ export default function Resume() {
             height="100%"
           />
           <p>
-            <a href="https://drive.google.com/file/d/1bqSUQb1_G4vchPrYFPidGC94z_pZVj3z/view?usp=drive_link" download="sgoOnlineResume.pdf">
+            <a href="https://drive.google.com/file/d/1r-qVtNn16lhFyQ3vssFcERwCdKpANFgA/view?usp=drive_link" download="sgoOnlineResume.pdf">
               Download PDF
             </a>
           </p>
