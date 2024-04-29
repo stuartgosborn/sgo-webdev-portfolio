@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import NavTabs from "./components/NavTabs";
 import Footer from "./components/Footer";
 import "./App.css";
+// import bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
 

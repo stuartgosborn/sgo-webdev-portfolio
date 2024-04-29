@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 function NavTabs() {
@@ -79,7 +79,7 @@ function NavTabs() {
           </Link>
         </li>
         {/* Dropdown menu for small screens */}
-        <li className="nav-item dropdown d-sm-none">
+        <li className="nav-item dropdown d-md-none">
           <button className="nav-link dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
